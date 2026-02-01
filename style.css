@@ -15,12 +15,43 @@
     box-sizing: border-box;
 }
 
-body {
-    height: 100vh;
+.body {
+    min-height: 100vh;
     background-color: var(--color-primary);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1;                 /* ESSENCIAL */
+  display: flex;
+  justify-content: center; /* centraliza o conteúdo do projeto */
+  align-items: center;
+}
+
+.footer-minimal {
+  width: 100%;
+  padding: 20px 0;
+  background: transparent; /* sem cor por padrão */
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+
+  font-size: 18px;  /* ← pode ajustar */
+  color: #333;      /* ← pode ajustar a cor */
+}
+
+.footer-logo {
+  width: 200px;     /* ← pode ajustar o tamanho */
+  height: auto;
 }
 
 .main-content {
@@ -105,7 +136,7 @@ body {
 }
 
 /* Estilos de botão */
-button {
+.button {
     padding: 15px 30px;
     font-family: "Inter", sans-serif;
     font-size: 16px;
@@ -126,7 +157,7 @@ button {
 }
 
 /* Listas */
-ul {
+.ul {
     list-style-type: none;
     color: var(--color-text);
     font-family: "Inter", sans-serif;
@@ -160,17 +191,3 @@ ul {
 .button-draw:hover {
     background-color: var(--color-button-hover);
 }
-
-footer {
-  position: fixed;        /* Mantém no fim da página */
-  bottom: 0;              /* Encosta no fundo */
-  left: 0;
-  width: 100%;            /* Ocupa toda a largura */
-  text-align: center;     /* Centraliza o conteúdo */
-  padding: 10px 0;        /* Espaçamento interno */
-  background-color: #3b50ff; /* Pode ajustar para combinar com seu tema */
-  color: white;           /* Cor do texto */
-  font-size: 14px;
-  font-family: Arial, sans-serif;
-}
-
